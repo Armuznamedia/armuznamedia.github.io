@@ -1,0 +1,256 @@
+
+ <!-- site metas -->
+      <title>Armuzna International</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <link rel="icon" href="images/LOGO ARMUZNA .png" type="image/x-icon">
+      <!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Detail Paket - Korea</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    .header {
+      background-color: #d7ad15;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      background-color: #fff;
+      padding: 30px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin-top: 30px;
+      border-radius: 10px;
+    }
+
+    .cover-img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    h2 {
+      margin-top: 20px;
+      font-size: 28px;
+      color: #333;
+    }
+
+    .info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin: 20px 0;
+    }
+
+    .info-item {
+      flex: 1;
+      font-size: 16px;
+      color: #555;
+    }
+
+    .info-item i {
+      margin-right: 8px;
+      color: #d7ad15;
+    }
+
+    .description {
+      font-size: 16px;
+      color: #444;
+      line-height: 1.7;
+    }
+
+    .btn-book {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 25px;
+      background-color: #d7ad15;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+    }
+
+    .btn-book:hover {
+      background-color: #b9970f;
+    }
+
+    @media(max-width: 768px) {
+      .info {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="header">
+    <h1>Detail Paket: Korea</h1>
+  </div>
+
+  <div class="container">
+    <img src="images/KOREA.jpg" alt="Paket Tour Korea" class="cover-img"/>
+
+    <h2>Jelajahi Musim Indah di Korea Selatan</h2>
+
+    <div class="info">
+      <div class="info-item"><i class="fas fa-map-marker-alt"></i> Seoul - Nami Island - Mt. Seorak</div>
+      <div class="info-item"><i class="fas fa-calendar-alt"></i> Keberangkatan: 15 Oktober 2025</div>
+      <div class="info-item"><i class="fas fa-user-friends"></i> Minimal: 15 orang</div>
+      <div class="info-item"><i class="fas fa-money-bill-wave"></i> Harga: Rp 17.800.000 /pax</div>
+    </div>
+
+    <div class="description">
+      <p>
+        Rasakan pengalaman musim gugur yang memukau di Korea Selatan bersama Armuzna. Dari keramaian Seoul hingga ketenangan Nami Island dan keindahan alam Mt. Seorak, paket ini cocok bagi Anda yang ingin menjelajahi budaya dan alam Korea.
+      </p>
+      <p>
+        Fasilitas termasuk:
+        <ul>
+          <li>Tiket pesawat PP (Jakarta - Seoul)</li>
+          <li>Hotel bintang 4 selama 6 hari 4 malam</li>
+          <li>Transportasi full AC selama tur</li>
+          <li>Makan sesuai itinerary (halal food)</li>
+          <li>Tiket masuk objek wisata</li>
+          <li>Tour guide lokal berbahasa Indonesia</li>
+          <li>Asuransi perjalanan</li>
+        </ul>
+      </p>
+    </div>
+
+    <a href="https://wa.me/6281388247521?text=Assalamualaikum%20saya%20ingin%20daftar%20Paket%20%2F%20Soul Korea" 
+   class="btn-book" target="_blank" rel="noopener noreferrer">
+   Daftar Sekarang
+</a>
+  <!-- SECTION TESTIMONI -->
+<div class="testimoni-section">
+  <div class="container">
+    <h2 class="testimoni-title">Testimoni Jamaah</h2>
+    <div class="testimoni-card" id="testimoniCard">
+      <!-- Akan diisi otomatis -->
+    </div>
+  </div>
+</div>
+
+<script>
+  const testimonis = [
+    {
+      nama: "Ibu Fatimah",
+      teks: "Luar biasa! Perjalanan ke Korea sangat teratur dan pelayanan ramah. Sangat berkesan!",
+      foto: "images/testi1.jpg"
+    },
+    {
+      nama: "Pak Ahmad",
+      teks: "Pemandunya sangat profesional, akomodasi bagus, makanan enak. Terima kasih Travel Armuzna!",
+      foto: "images/testi2.jpg"
+    },
+    {
+      nama: "Clara cangtip",
+      teks: "Sungguh pengalaman spiritual dan budaya yang mendalam. InsyaAllah ikut lagi!",
+      foto: "images/testi3.jpg"
+    }
+  ];
+  
+
+  let indexTesti = 0;
+
+  function tampilkanTestimoni() {
+    const container = document.getElementById("testimoniCard");
+    const testi = testimonis[indexTesti];
+
+    container.innerHTML = `
+      <div class="card-testi">
+        <img src="${testi.foto}" alt="${testi.nama}">
+        <p class="teks-testi">"${testi.teks}"</p>
+        <h4 class="nama-testi">- ${testi.nama}</h4>
+      </div>
+    `;
+
+    indexTesti = (indexTesti + 1) % testimonis.length;
+  }
+
+  tampilkanTestimoni(); // Pertama tampil
+  setInterval(tampilkanTestimoni, 5000); // Ganti tiap 5 detik
+</script>
+
+<style>
+  .testimoni-section {
+    padding: 60px 0;
+    background-color: #fdf7e3;
+    text-align: center;
+  }
+
+  .testimoni-title {
+    font-size: 28px;
+    color: #d7ad15;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+
+  .card-testi {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  .card-testi img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #d7ad15;
+  }
+
+  .teks-testi {
+    font-size: 16px;
+    font-style: italic;
+    margin-bottom: 10px;
+    color: #444;
+  }
+
+  .nama-testi {
+    font-weight: bold;
+    color: #222;
+  }
+
+  @media (max-width: 576px) {
+    .card-testi {
+      padding: 20px;
+    }
+
+    .testimoni-title {
+      font-size: 22px;
+    }
+  }
+  
+</style>
+<!-- Setelah testimoni -->
+<div class="testimoni-section">
+</div>
+
+<!-- Tombol Kembali -->
+<div style="text-align: center; margin-top: 40px;">
+  <a href="index.html" class="btn-home">← Kembali ke Beranda</a>
+</div>
+
+</body>
+</html>
